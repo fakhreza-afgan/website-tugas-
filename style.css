@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
+
+:root {
+  --rf-brand: #fb8d19;
+  --rf-brand-dark: #d9750f;
+  --rf-brand-rgb: 251, 141, 25;
+  --rf-dark: #212237;
+  --rf-body: #6b6b76;
+  --rf-light-bg: #fff8f0;
+  --f-main: "Raleway", sans-serif;
+  --transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  --shadow: 0px 15px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0px 20px 40px rgba(var(--rf-brand-rgb), 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--f-main);
+  color: var(--rf-body);
+  line-height: 1.7;
+  background-color: #fffdfb;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: var(--f-main);
+  font-weight: 800;
+  color: var(--rf-dark);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  background: linear-gradient(90deg, var(--rf-dark), #2c2d4a) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+}
+
+.navbar-brand::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rf-brand);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: 600;
+  margin: 0 6px;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(var(--rf-brand-rgb), 0.15);
+}
+
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  background: var(--rf-brand);
+  box-shadow: 0 4px 14px rgba(var(--rf-brand-rgb), 0.4);
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ============ HERO / TENTANG SAYA ============ */
+#halaman-tentang > section:first-of-type {
+  background: radial-gradient(circle at top right, #fff3e2, #fffdfb 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+#halaman-tentang > section:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(var(--rf-brand-rgb), 0.12);
+  z-index: 0;
+}
+
+#halaman-tentang .container {
+  position: relative;
+  z-index: 1;
+}
+
+#halaman-tentang .text-muted {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rf-brand) !important;
+}
+
+#halaman-tentang img.rounded-circle {
+  border: 6px solid #ffffff;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+#halaman-tentang img.rounded-circle:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ============ BUTTONS ============ */
+.btn-success {
+  background: linear-gradient(135deg, var(--rf-brand), var(--rf-brand-dark)) !important;
+  border: none !important;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 20px rgba(var(--rf-brand-rgb), 0.35);
+  transition: var(--transition);
+}
+
+.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(var(--rf-brand-rgb), 0.45);
+}
+
+/* ============ BIODATA TABLE ============ */
+#halaman-tentang section.bg-light {
+  background: var(--rf-light-bg) !important;
+}
+
+.table {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table tbody tr {
+  transition: var(--transition);
+}
+
+.table tbody tr:hover {
+  background: rgba(var(--rf-brand-rgb), 0.06);
+}
+
+.table th, .table td {
+  padding: 1rem 1.5rem;
+  border-color: #f0e9df;
+  vertical-align: middle;
+}
+
+.table th {
+  color: var(--rf-dark);
+  font-weight: 700;
+  width: 40%;
+}
+
+/* ============ PENGUMPULAN TUGAS ============ */
+#halaman-tugas video {
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 4px solid #ffffff;
+  outline: 1px solid #f0e9df;
+}
+
+#halaman-tugas h5 {
+  color: var(--rf-brand-dark);
+  margin-bottom: 0.8rem;
+}
+
+/* Tab Pengumpulan Tugas */
+.tugas-tab {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #f0e9df;
+  border-left: 4px solid var(--rf-brand);
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.7rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  color: var(--rf-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tugas-tab:hover {
+  transform: translateX(6px);
+  color: var(--rf-brand);
+}
+
+.tugas-tab-active {
+  background: var(--rf-brand) !important;
+  color: #ffffff !important;
+  border-left-color: var(--rf-dark) !important;
+  box-shadow: 0 8px 20px rgba(var(--rf-brand-rgb), 0.35);
+}
+
+/* ============ TERSERAH & CONTACT ============ */
+#halaman-terserah, #halaman-contact {
+  min-height: 60vh;
+}
+
+#halaman-contact .text-muted {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rf-brand) !important;
+}
+
+.contact-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #f0e9df;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--rf-brand);
+}
+
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--rf-brand-rgb), 0.12);
+  border-radius: 50%;
+  transition: var(--transition);
+  padding: 14px;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-card:hover .contact-icon {
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  transform: scale(1.1);
+}
+
+.contact-card h5 {
+  color: var(--rf-dark);
+  margin-bottom: 0.4rem;
+}
+
+.contact-card p {
+  color: var(--rf-body);
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+/* ============ GENERAL SECTION SPACING ============ */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* ============ GAME TIC-TAC-TOE ============ */
+.game-wrapper {
+  max-width: 340px;
+}
+
+.game-status {
+  font-weight: 700;
+  color: var(--rf-dark);
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid #f0e9df;
+}
+
+.game-cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: var(--rf-light-bg);
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--rf-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.game-cell:hover {
+  background: rgba(var(--rf-brand-rgb), 0.15);
+  transform: scale(1.04);
+}
+
+.game-cell.cell-x {
+  color: var(--rf-brand);
+}
+
+.game-cell.cell-o {
+  color: var(--rf-dark);
+}
+
+.game-score {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--rf-body);
+  flex-wrap: wrap;
+}
+
+.game-score b {
+  color: var(--rf-dark);
+}
