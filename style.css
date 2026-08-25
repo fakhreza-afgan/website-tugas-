@@ -223,6 +223,23 @@ h1 {
   box-shadow: 0 8px 20px rgba(var(--rf-brand-rgb), 0.35);
 }
 
+.tugas-artikel {
+  max-width: 600px;
+  background: #ffffff;
+  border: 1px solid #f0e9df;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.tugas-artikel p {
+  margin-bottom: 1rem;
+}
+
+.tugas-artikel p:last-child {
+  margin-bottom: 0;
+}
+
 /* ============ TERSERAH & CONTACT ============ */
 #halaman-terserah, #halaman-contact {
   min-height: 60vh;
@@ -427,4 +444,87 @@ section {
 
 .sq-capture {
   box-shadow: inset 0 0 0 4px rgba(220, 53, 69, 0.75);
+}
+
+/* ============ GAME BLOCK BLAST ============ */
+.blockblast-wrapper {
+  max-width: 400px;
+}
+
+.bb-status {
+  font-weight: 700;
+  color: var(--rf-dark);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  min-height: 1.6rem;
+}
+
+.bb-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--rf-dark);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: var(--shadow);
+}
+
+.bb-sq {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.bb-sq:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bb-tray {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.bb-tray-slot {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 6px;
+}
+
+.bb-tray-selected {
+  background: rgba(var(--rf-brand-rgb), 0.2);
+  box-shadow: inset 0 0 0 2px var(--rf-brand);
+}
+
+.bb-tray-empty {
+  cursor: default;
+}
+
+.bb-mini {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.bb-mini-cell {
+  border-radius: 3px;
 }

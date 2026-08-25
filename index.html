@@ -53,7 +53,7 @@
                 href="#"
                 onclick="tampilkanHalaman('terserah')"
                 id="menu-terserah"
-                >terserah</a
+                >game</a
               >
             </li>
             <li class="nav-item">
@@ -186,31 +186,52 @@
                 >Tugas 2</a
               >
             </li>
-            <li>
-              <a
-                href="#"
-                onclick="
-                  tampilkanTugas('tugas3');
-                  return false;
-                "
-                id="tab-tugas3"
-                class="tugas-tab"
-                >Tugas 3</a
-              >
-            </li>
           </ul>
 
           <!-- KONTEN TUGAS pamflet -->
           <div id="konten-tugas1" class="konten-tugas mb-5">
             <h5>Tugas pamflet pawai budaya</h5>
-            <a
-              href="https://drive.google.com/drive/folders/1BRcR-Z0WiUGY7RGKP5G9TpVk-l3YVgXC"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-success"
-            >
-              Lihat Tugas di Google Drive
-            </a>
+            <img
+              src="pamflet nyar.jpg"
+              alt="Foto Tugas 1"
+              class="img-fluid rounded mb-3"
+              style="
+                max-width: 480px;
+                width: 100%;
+                box-shadow: var(--shadow);
+                display: block;
+              "
+            />
+            <div class="tugas-artikel">
+              <p>
+                SMA Negeri 1 Nganjuk Raih Juara 1 dalam Pawai Budaya HUT RI
+                ke-81 Nganjuk – SMA Negeri 1 Nganjuk berhasil meraih juara 1
+                dalam ajang Pawai Budaya yang diselenggarakan oleh Pemerintah
+                Kabupaten Nganjuk dalam rangka memperingati Hari Ulang Tahun
+                (HUT) Republik Indonesia ke-81 tahun 2026. Prestasi tersebut
+                diraih berkat penampilan yang memukau dengan mengangkat kekayaan
+                budaya Nusantara. Pawai budaya yang berlangsung pada Sabtu pukul
+                13.00 WIB ini diikuti oleh perwakilan berbagai SMA dan badan
+                usaha yang ada di Kabupaten Nganjuk. Kegiatan tersebut digelar
+                di sepanjang Jalan Ahmad Yani, dimulai dari kawasan Stadion
+                Nganjuk dan berakhir di selatan Alun-Alun Nganjuk. Dalam
+                kegiatan tersebut, SMA Negeri 1 Nganjuk menampilkan berbagai
+                unsur budaya Indonesia melalui pakaian adat, pertunjukan seni,
+                serta dekorasi bernuansa tradisional. Penampilan yang
+                menggabungkan kreativitas, kekompakan, dan nilai budaya tersebut
+                berhasil menarik perhatian masyarakat yang menyaksikan jalannya
+                pawai. Keberhasilan meraih juara 1 menjadi bukti kerja keras
+                seluruh peserta, panitia, dan pihak sekolah dalam mempersiapkan
+                penampilan terbaik. Selain menjadi ajang perlombaan, kegiatan
+                ini juga menjadi sarana untuk menumbuhkan rasa cinta terhadap
+                budaya Indonesia di kalangan generasi muda. Dengan prestasi
+                tersebut, SMA Negeri 1 Nganjuk kembali menunjukkan eksistensinya
+                sebagai sekolah yang aktif dalam mengembangkan kreativitas siswa
+                serta melestarikan budaya bangsa. Kemenangan ini diharapkan
+                dapat menjadi motivasi untuk terus berkarya dan membawa nama
+                baik sekolah di berbagai kegiatan berikutnya.
+              </p>
+            </div>
           </div>
 
           <!-- KONTEN TUGAS VIDEO -->
@@ -229,45 +250,58 @@
               Tonton Video di Google Drive
             </a>
           </div>
-
-          <!-- KONTEN TUGAS jurnalistik -->
-          <div
-            id="konten-tugas3"
-            class="konten-tugas mb-5"
-            style="display: none"
-          >
-            <h5>Judul Tugas 3</h5>
-            <img
-              src="nama-file-tugas3.jpg"
-              alt="Foto Tugas 3"
-              class="img-fluid rounded"
-              style="
-                max-width: 400px;
-                width: 100%;
-                box-shadow: var(--shadow);
-                display: block;
-              "
-            />
-          </div>
         </div>
       </section>
     </div>
 
-    <!-- HALAMAN GAME -->
+    <!-- HALAMAN TERSERAH -->
     <div id="halaman-terserah" class="halaman" style="display: none">
       <section class="py-5">
         <div class="container">
-          <p class="text-muted mb-1">kalo gabut</p>
-          <h2 class="mb-3">Main Catur aja</h2>
+          <p class="text-muted mb-1">Iseng-iseng</p>
+          <h2 class="mb-4">Game</h2>
+
+          <h4 class="mb-2">Main Catur</h4>
           <p class="mb-4" style="max-width: 500px">
             Main catur berdua di HP yang sama. Tap bidak buat lihat langkah yang
             boleh diambil, lalu tap kotak tujuan.
           </p>
 
-          <div class="chess-wrapper">
+          <div class="chess-wrapper mb-5">
             <div class="chess-status" id="chess-status">Giliran: Putih</div>
             <div class="chess-board" id="chess-board"></div>
             <button class="btn btn-success mt-3" id="chess-reset">
+              Main Lagi
+            </button>
+          </div>
+
+          <h4 class="mb-2">Tic-Tac-Toe</h4>
+          <p class="mb-4" style="max-width: 500px">
+            Main tic-tac-toe berdua di HP yang sama, gantian jalan.
+          </p>
+
+          <div class="game-wrapper">
+            <div class="game-status" id="game-status">Giliran: X</div>
+
+            <div class="game-board" id="game-board">
+              <button class="game-cell" data-index="0"></button>
+              <button class="game-cell" data-index="1"></button>
+              <button class="game-cell" data-index="2"></button>
+              <button class="game-cell" data-index="3"></button>
+              <button class="game-cell" data-index="4"></button>
+              <button class="game-cell" data-index="5"></button>
+              <button class="game-cell" data-index="6"></button>
+              <button class="game-cell" data-index="7"></button>
+              <button class="game-cell" data-index="8"></button>
+            </div>
+
+            <div class="game-score">
+              <span>X menang: <b id="score-x">0</b></span>
+              <span>O menang: <b id="score-o">0</b></span>
+              <span>Seri: <b id="score-draw">0</b></span>
+            </div>
+
+            <button class="btn btn-success mt-3" id="game-reset">
               Main Lagi
             </button>
           </div>
@@ -757,6 +791,100 @@
 
         resetBtn.addEventListener("click", resetCatur);
         resetCatur();
+      })();
+
+      // ============ GAME TIC-TAC-TOE ============
+      (function () {
+        var cells = document.querySelectorAll(".game-cell");
+        var statusEl = document.getElementById("game-status");
+        var resetBtn = document.getElementById("game-reset");
+        var scoreXEl = document.getElementById("score-x");
+        var scoreOEl = document.getElementById("score-o");
+        var scoreDrawEl = document.getElementById("score-draw");
+
+        if (!cells.length) return;
+
+        var papan = ["", "", "", "", "", "", "", "", ""];
+        var giliran = "X";
+        var permainanSelesai = false;
+        var skor = { X: 0, O: 0, seri: 0 };
+
+        var polaMenang = [
+          [0, 1, 2],
+          [3, 4, 5],
+          [6, 7, 8],
+          [0, 3, 6],
+          [1, 4, 7],
+          [2, 5, 8],
+          [0, 4, 8],
+          [2, 4, 6],
+        ];
+
+        function cekPemenang() {
+          for (var i = 0; i < polaMenang.length; i++) {
+            var a = polaMenang[i][0];
+            var b = polaMenang[i][1];
+            var c = polaMenang[i][2];
+            if (papan[a] && papan[a] === papan[b] && papan[a] === papan[c]) {
+              return papan[a];
+            }
+          }
+          if (
+            papan.every(function (isi) {
+              return isi !== "";
+            })
+          ) {
+            return "seri";
+          }
+          return null;
+        }
+
+        function klikSel(e) {
+          var index = e.target.getAttribute("data-index");
+          if (permainanSelesai || papan[index] !== "") {
+            return;
+          }
+
+          papan[index] = giliran;
+          e.target.textContent = giliran;
+          e.target.classList.add(giliran === "X" ? "cell-x" : "cell-o");
+
+          var hasil = cekPemenang();
+          if (hasil === "seri") {
+            statusEl.textContent = "Seri! Coba lagi ya.";
+            skor.seri++;
+            scoreDrawEl.textContent = skor.seri;
+            permainanSelesai = true;
+          } else if (hasil) {
+            statusEl.textContent = hasil + " menang! 🎉";
+            skor[hasil]++;
+            if (hasil === "X") {
+              scoreXEl.textContent = skor.X;
+            } else {
+              scoreOEl.textContent = skor.O;
+            }
+            permainanSelesai = true;
+          } else {
+            giliran = giliran === "X" ? "O" : "X";
+            statusEl.textContent = "Giliran: " + giliran;
+          }
+        }
+
+        function resetGame() {
+          papan = ["", "", "", "", "", "", "", "", ""];
+          giliran = "X";
+          permainanSelesai = false;
+          statusEl.textContent = "Giliran: X";
+          cells.forEach(function (cell) {
+            cell.textContent = "";
+            cell.classList.remove("cell-x", "cell-o");
+          });
+        }
+
+        cells.forEach(function (cell) {
+          cell.addEventListener("click", klikSel);
+        });
+        resetBtn.addEventListener("click", resetGame);
       })();
     </script>
   </body>
